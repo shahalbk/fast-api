@@ -1,0 +1,60 @@
+status code:
+200 is success
+404 is page not found(can't read the data)
+500 is internal server error
+
+
+api 
+
+api is application programming interface.
+and it is used to connect to integrate software applications
+api cycle is
+Request
+
+You (or your app) ask the API for something.
+
+Example: “What’s the weather in Chennai?”
+
+Processing
+
+The API framework takes your request to the server/database.
+
+The system looks up the data or performs the action.
+
+Example: Weather server finds today’s temperature.
+
+Response
+
+The API brings the result back to you.
+
+Example: { "city": "Chennai", "temp": 31, "condition": "Cloudy" }.
+
+
+mainly using fastapi framework for create api others are Django and flask etc
+
+eg 
+uber 
+food delivery app
+whether app
+social media ligin  ie you login pubg using google email.
+upi using banks api
+vscode and copilot
+
+
+eg 
+from fastapi import FastAPI
+
+obj = FastAPI()
+
+@obj.get("/")
+def welcome():
+    return {"message": "welcome to the math API"}
+
+@obj.get("/multiply/{number}")
+def multiply(number:int):
+    return {"number":5*number}
+
+@obj.get("/square/{number}")
+def square(number:int):
+    return {"square is ":number*number}
+
